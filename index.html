@@ -1,1 +1,338 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Security Utilities</title>
+
+    
+    <link rel="stylesheet" href="css/utilities.css">
+
+</head>
+
+<body>
+
+    <main class="content">
+
+        <div class="content-inner">
+
+            <!-- =====================================
+                 TOP ROW
+            ====================================== -->
+
+            <div class="top-row">
+
+                <div class="breadcrumb">
+                    WORKSPACE / UTILITIES
+                </div>
+
+                <!-- LIGHT / DARK TOGGLE -->
+
+                <div class="theme-toggle">
+
+                    <span class="theme-text">
+                        LIGHT
+                    </span>
+
+                    <label class="toggle-switch">
+
+                        <input
+                            type="checkbox"
+                            id="themeToggle"
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                    <span class="theme-text">
+                        DARK
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 TITLE
+            ====================================== -->
+
+            <h1 class="page-title">
+                Security utilities.
+            </h1>
+
+            <p class="subtitle">
+                Small client-side tools for everyday security work.
+            </p>
+
+
+            <!-- =====================================
+                 SEARCH
+            ====================================== -->
+
+            <div class="search-box">
+
+                <div class="search-icon">
+                    ⌕
+                </div>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tools..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- =====================================
+                 TOOL GRID
+            ====================================== -->
+
+            <div
+                class="tools-grid"
+                id="toolsGrid"
+            >
+
+                <!-- BASE64 -->
+
+                <div
+                    class="tool-card"
+                    data-name="Base64 Encoder Decoder"
+                    data-category="encoding"
+                >
+
+                    <div class="category">
+                        ENCODING
+                    </div>
+
+                    <div class="tool-title">
+                        Base64 Encoder / Decoder
+                    </div>
+
+                    <div class="tool-description">
+                        Client-side security utility
+                    </div>
+
+                    <button
+                        class="launch-btn"
+                        data-tool="base64"
+                    >
+                        LAUNCH
+                    </button>
+
+                </div>
+
+
+                <!-- SHA-256 -->
+
+                <div
+                    class="tool-card"
+                    data-name="SHA-256 Hash Generator"
+                    data-category="crypto"
+                >
+
+                    <div class="category">
+                        CRYPTO
+                    </div>
+
+                    <div class="tool-title">
+                        SHA-256 Hash Generator
+                    </div>
+
+                    <div class="tool-description">
+                        Client-side security utility
+                    </div>
+
+                    <button
+                        class="launch-btn"
+                        data-tool="sha256"
+                    >
+                        LAUNCH
+                    </button>
+
+                </div>
+
+
+                <!-- JWT -->
+
+                <div
+                    class="tool-card"
+                    data-name="JWT Decoder"
+                    data-category="web"
+                >
+
+                    <div class="category">
+                        WEB
+                    </div>
+
+                    <div class="tool-title">
+                        JWT Decoder
+                    </div>
+
+                    <div class="tool-description">
+                        Client-side security utility
+                    </div>
+
+                    <button
+                        class="launch-btn"
+                        data-tool="jwt"
+                    >
+                        LAUNCH
+                    </button>
+
+                </div>
+
+
+                <!-- URL -->
+
+                <div
+                    class="tool-card"
+                    data-name="URL Encoder Decoder"
+                    data-category="web"
+                >
+
+                    <div class="category">
+                        WEB
+                    </div>
+
+                    <div class="tool-title">
+                        URL Encoder / Decoder
+                    </div>
+
+                    <div class="tool-description">
+                        Client-side security utility
+                    </div>
+
+                    <button
+                        class="launch-btn"
+                        data-tool="url"
+                    >
+                        LAUNCH
+                    </button>
+
+                </div>
+
+
+                <!-- REGEX -->
+
+                <div
+                    class="tool-card"
+                    data-name="Regex Tester"
+                    data-category="developer"
+                >
+
+                    <div class="category">
+                        DEVELOPER
+                    </div>
+
+                    <div class="tool-title">
+                        Regex Tester
+                    </div>
+
+                    <div class="tool-description">
+                        Client-side security utility
+                    </div>
+
+                    <button
+                        class="launch-btn"
+                        data-tool="regex"
+                    >
+                        LAUNCH
+                    </button>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div
+                    class="tool-card"
+                    data-name="Password Strength"
+                    data-category="developer"
+                >
+
+                    <div class="category">
+                        DEVELOPER
+                    </div>
+
+                    <div class="tool-title">
+                        Password Strength
+                    </div>
+
+                    <div class="tool-description">
+                        Client-side security utility
+                    </div>
+
+                    <button
+                        class="launch-btn"
+                        data-tool="password"
+                    >
+                        LAUNCH
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- NO RESULTS -->
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+                No tools found.
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================
+         TOOL MODAL
+    ====================================== -->
+
+    <div
+        class="modal"
+        id="toolModal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-title"
+                id="modalTitle"
+            ></div>
+
+            <div
+                class="modal-content"
+                id="modalContent"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/utilities.js"></script>
+
+</body>
+
+</html>
