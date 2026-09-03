@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create your account — CyberM</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/signup.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="signup.html" class="nav-logo-link">
+      <img src="assets/cyberm-logo.png" alt="CyberM" class="nav-logo-img">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><button type="button" data-nav="platform">Platform</button></li>
+    <li><button type="button" data-nav="workspace">Workspace</button></li>
+    <li><button type="button" data-nav="ai-assistant">AI Assistant</button></li>
+    <li><button type="button" data-nav="who-its-for">Who's it for</button></li>
+  </ul>
+  <div class="nav-right">
+    <button type="button" class="nav-login-link" id="navLogin">Log in</button>
+    <a href="signup.html" class="nav-cta">Get Started →</a>
+  </div>
+</nav>
+
+<div class="split">
+  <div class="panel-left">
+    <div class="eyebrow">Start your workspace</div>
+    <h1>Build your security <span class="accent">workspace.</span></h1>
+    <p>Bring cybersecurity learning, tools, research and progress together.</p>
+  </div>
+
+  <div class="panel-right">
+    <div class="form-wrap">
+      <div class="eyebrow">Create account</div>
+      <h2>Create your account.</h2>
+
+      <form id="signupForm" novalidate>
+        <div class="field" id="field-fullname">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Moeen Parvin" autocomplete="name">
+          <div class="field-error-msg">Please enter your full name.</div>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="email" placeholder="you@example.com" autocomplete="email">
+          <div class="field-error-msg">Please enter a valid email address.</div>
+        </div>
+
+        <div class="field" id="field-username">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="#Reeem" autocomplete="username">
+          <div class="field-error-msg">Please choose a username.</div>
+        </div>
+
+        <div class="field" id="field-password">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="password" placeholder="••••••••" autocomplete="new-password">
+          <div class="field-error-msg">Password must be at least 8 characters.</div>
+        </div>
+
+        <div class="role-group">
+          <label>What best describes you?</label>
+          <div class="role-grid" id="roleGrid">
+            <button type="button" class="role-option" data-role="Student">Student</button>
+            <button type="button" class="role-option" data-role="Researcher">Researcher</button>
+            <button type="button" class="role-option" data-role="Pentester">Pentester</button>
+            <button type="button" class="role-option" data-role="Defender">Defender</button>
+            <button type="button" class="role-option" data-role="Developer">Developer</button>
+            <button type="button" class="role-option" data-role="CTF Player">CTF Player</button>
+          </div>
+        </div>
+
+        <div class="field terms-row" id="field-terms">
+          <div class="checkbox-row">
+            <input type="checkbox" id="agreeTerms" name="agreeTerms">
+            <label for="agreeTerms" style="margin:0;color:var(--text-gray);font-weight:400;">
+              I agree to <a href="#" data-nav="terms">Terms</a> and <a href="#" data-nav="privacy">Privacy</a>
+            </label>
+          </div>
+          <div class="field-error-msg">You must agree to the Terms and Privacy Policy.</div>
+        </div>
+
+        <button type="submit" class="btn-primary" id="submitSignup">Create account →</button>
+
+        <div class="switch-link">
+          Already have an account? <button type="button" id="goToLogin">Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>
