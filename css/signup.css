@@ -1,0 +1,53 @@
+/* =========================================================
+   CYBERM — signup page
+   Loaded after css/style.css. Holds only what's unique to
+   the "Create your account" page: the role picker grid.
+   ========================================================= */
+
+.role-group {
+  margin-top: 2px;
+}
+
+.role-group > label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #8a8579;
+  margin-bottom: 10px;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.role-option {
+  border: 1px solid var(--border);
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 9px 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.role-option:hover {
+  border-color: #c7c2b5;
+}
+
+.role-option.selected {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .role-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
