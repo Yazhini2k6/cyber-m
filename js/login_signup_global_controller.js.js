@@ -1,6 +1,5 @@
 window.CyberM = (function () {
   let toastTimer = null;
-
   function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
     if (!toast) return;
