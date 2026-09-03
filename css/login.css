@@ -1,0 +1,7 @@
+/* =========================================================
+   CYBERM — login page
+   Loaded after css/style.css. The "Sign in" page reuses the
+   shared form, button, and checkbox-row primitives as-is, so
+   this file is currently just a hook for future page-specific
+   tweaks (e.g. adjusting the Google button or subtitle).
+   ========================================================= */
