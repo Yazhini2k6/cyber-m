@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="css/dashboard_overview.css">
+    <script src="js/dashboard_overview.js"></script>
+   
+</head>
+<body>
+
+    <!-- Main Overview Content -->
+    <div class="overview-wrapper">
+        
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="breadcrumb">WORKSPACE / OVERVIEW</div>
+            <div class="actions">
+                <input type="text" class="search-box" placeholder="⌕ Search workspace...">
+                <button class="theme-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            </div>
+        </div>
+
+        <!-- Greeting Header -->
+        <div class="header-section">
+            <h1>Good morning.</h1>
+            <p>Here's your cybersecurity workspace at a glance.</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-title">Learning</div>
+                <div class="stat-value">72%</div>
+                <div class="stat-subtitle">+8% This week</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Resources</div>
+                <div class="stat-value">48</div>
+                <div class="stat-subtitle">12 This month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">CTFs Solved</div>
+                <div class="stat-value">24</div>
+                <div class="stat-subtitle">3 In progress</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Roadmap</div>
+                <div class="stat-value">46%</div>
+                <div class="stat-subtitle">Security Analyst</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Learning -->
+        <div class="section-label">01 / Learning</div>
+        <h2 class="section-title">Continue learning</h2>
+
+        <div class="learning-grid">
+            <!-- Card 1 -->
+            <div class="course-card">
+                <div class="course-tag">Web Security</div>
+                <div class="course-title">Web Application Security</div>
+                <div class="course-desc">Practical security course</div>
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 68%;"></div>
+                    </div>
+                    <div class="progress-text">68%</div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="course-card">
+                <div class="course-tag">Networking</div>
+                <div class="course-title">Network Security Fundamentals</div>
+                <div class="course-desc">Practical security course</div>
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 42%;"></div>
+                    </div>
+                    <div class="progress-text">42%</div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="course-card">
+                <div class="course-tag">Forensics</div>
+                <div class="course-title">Digital Forensics</div>
+                <div class="course-desc">Practical security course</div>
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 25%;"></div>
+                    </div>
+                    <div class="progress-text">25%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Career Roadmap -->
+        <div class="section-label">02 / Career</div>
+        <h2 class="section-title">Your career roadmap</h2>
+
+        <div class="roadmap-card">
+            <div class="timeline-wrapper">
+                <!-- Background Line -->
+                <div class="timeline-bg-line"></div>
+                <!-- Active Progress Line -->
+                <div class="timeline-fill-line"></div>
+                
+                <!-- Nodes -->
+                <div class="timeline-node">
+                    <div class="node-circle active"></div>
+                    <div class="node-label">Foundations</div>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle active"></div>
+                    <div class="node-label">Networking</div>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle active"></div>
+                    <div class="node-label">Linux</div>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle"></div>
+                    <div class="node-label">Security</div>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle"></div>
+                    <div class="node-label">SIEM</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
