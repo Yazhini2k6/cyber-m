@@ -9,6 +9,17 @@
    
 </head>
 <body>
+        <!-- 1. The placeholder for your header -->
+    <div id="header-placeholder"></div>
+
+    <!-- 2. The JavaScript to inject the header -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Main Overview Content -->
     <div class="overview-wrapper">
