@@ -51,161 +51,6 @@ body {
 
 
 /* ==========================================
-   HEADER
-========================================== */
-
-.site-header {
-    height: 55px;
-    border-bottom: 1px solid var(--border);
-}
-
-
-.header-container {
-    height: 100%;
-    width: calc(100% - 90px);
-    max-width: 1400px;
-
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-/* ==========================================
-   LOGO
-========================================== */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    text-decoration: none;
-    color: var(--black);
-}
-
-
-.logo-box {
-    width: 27px;
-    height: 27px;
-
-    background: var(--black);
-    color: var(--white);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 7px;
-    font-weight: 700;
-
-    border-radius: 2px;
-}
-
-
-.logo-name {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-
-.logo-name span {
-    color: var(--orange);
-}
-
-
-/* ==========================================
-   NAVIGATION
-========================================== */
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 42px;
-}
-
-
-.main-nav a {
-    color: #66635e;
-    text-decoration: none;
-
-    font-size: 10px;
-    font-weight: 500;
-
-    transition: color 0.25s ease;
-}
-
-
-.main-nav a:hover {
-    color: var(--orange);
-}
-
-
-/* ==========================================
-   HEADER ACTIONS
-========================================== */
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-
-.login-link {
-    text-decoration: none;
-
-    font-size: 10px;
-    color: var(--dark-gray);
-
-    transition: color 0.25s ease;
-}
-
-
-.login-link:hover {
-    color: var(--orange);
-}
-
-
-.get-started-btn {
-    background: var(--black);
-    color: var(--white);
-
-    padding: 12px 21px;
-
-    text-decoration: none;
-
-    font-size: 10px;
-    font-weight: 600;
-
-    transition: all 0.25s ease;
-}
-
-
-.get-started-btn:hover {
-    background: var(--orange);
-}
-
-
-/* ==========================================
-   MOBILE BUTTON
-========================================== */
-
-.mobile-menu-btn {
-    display: none;
-
-    border: none;
-    background: transparent;
-
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-/* ==========================================
    HERO SECTION
 ========================================== */
 
@@ -215,7 +60,7 @@ body {
 
     margin: 0 auto;
 
-    padding-top: 55px;
+    padding-top: 100px;
 }
 
 
@@ -453,6 +298,12 @@ body {
 }
 
 
+.feature-card.active-card {
+    background: var(--white);
+    border-color: var(--orange);
+}
+
+
 .card-number {
     width: 74px;
     height: 20px;
@@ -499,18 +350,15 @@ body {
         padding: 0;
     }
 
+
     .page-wrapper {
         border: none;
     }
 
 
-    .header-container {
-        width: calc(100% - 50px);
-    }
-
-
     .hero-section {
         width: calc(100% - 50px);
+        padding-top: 70px;
     }
 
 
@@ -532,11 +380,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-    .main-nav {
-        gap: 20px;
-    }
-
 }
 
 
@@ -546,25 +389,9 @@ body {
 
 @media (max-width: 600px) {
 
-    .header-container {
-        width: calc(100% - 30px);
-    }
-
-
     .hero-section {
         width: calc(100% - 40px);
-        padding-top: 45px;
-    }
-
-
-    .main-nav,
-    .header-actions {
-        display: none;
-    }
-
-
-    .mobile-menu-btn {
-        display: block;
+        padding-top: 50px;
     }
 
 
