@@ -1,84 +1,105 @@
-document.addEventListener('DOMContentLoaded', () => {
-  initLoginForm();
-  initForgotPassword();
-  initGoogleLogin();
-});
+// Login Form Handler
+document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('loginForm');
+  const googleBtn = document.getElementById('googleBtn');
+  const rememberCheckbox = document.getElementById('remember');
 
-function initLoginForm() {
-  const form = document.getElementById('loginForm');
-  if (!form) return;
+  // Initialize remember me from localStorage
+  const savedEmail = localStorage.getItem('savedEmail');
+  const savedRemember = localStorage.getItem('rememberMe');
 
-  const { showToast, setFieldError, isValidEmail } = window.CyberM;
-  const submitBtn = document.getElementById('submitLogin');
+  if (savedRemember === 'true' && savedEmail) {
+    document.getElementById('email').value = savedEmail;
+    rememberCheckbox.checked = true;
+  }
 
-  form.addEventListener('submit', (e) => {
+  // Form submission
+  loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const email = document.getElementById('loginEmail').value.trim();
-    const password = document.getElementById('loginPassword').value;
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const remember = rememberCheckbox.checked;
 
-    let valid = true;
-
-    if (!isValidEmail(email)) {
-      setFieldError('field-login-email', true);
-      valid = false;
-    } else {
-      setFieldError('field-login-email', false);
-    }
-
-    if (!password) {
-      setFieldError('field-login-password', true);
-      valid = false;
-    } else {
-      setFieldError('field-login-password', false);
-    }
-
-    if (!valid) {
-      showToast('Please fix the highlighted fields.', 'error');
+    // Basic validation
+    if (!email || !password) {
+      alert('Please fill in all fields');
       return;
     }
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Signing in...';
-
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Log in →';
-      showToast('Signed in successfully.');
-      console.log('Login attempt:', { email });
-    }, 900);
-  });
-}
-
-function initForgotPassword() {
-  const forgotPassword = document.getElementById('forgotPassword');
-  if (!forgotPassword) return;
-
-  const { showToast } = window.CyberM;
-
-  forgotPassword.addEventListener('click', (e) => {
-    e.preventDefault();
-    const emailField = document.getElementById('loginEmail');
-    const email = emailField ? emailField.value.trim() : '';
-    if (email) {
-      showToast(`Password reset link sent to ${email}.`);
-    } else {
-      showToast('Enter your email above first, then click "Forgot password?".', 'error');
-      emailField && emailField.focus();
+    if (!isValidEmail(email)) {
+      alert('Please enter a valid email address');
+      return;
     }
+
+    // Save remember me preference
+    if (remember) {
+      localStorage.setItem('savedEmail', email);
+      localStorage.setItem('rememberMe', 'true');
+    } else {
+      localStorage.removeItem('savedEmail');
+      localStorage.removeItem('rememberMe');
+    }
+
+    // Simulate login process
+    console.log('Login attempt:', {
+      email: email,
+      password: '••••••••',
+      remember: remember
+    });
+
+    // Show success message and redirect (simulated)
+    alert('Login successful! Redirecting to dashboard...');
+    // In a real application, you would redirect to the dashboard
+    // window.location.href = '/dashboard';
   });
+
+  // Google login
+  googleBtn.addEventListener('click', function() {
+    console.log('Google login clicked');
+    alert('Google login functionality would be implemented here');
+    // In a real application, you would initialize Google OAuth here
+  });
+
+  // Toggle password visibility
+  setupPasswordToggle('password');
+});
+
+// Email validation
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
-function initGoogleLogin() {
-  const googleLogin = document.getElementById('googleLogin');
-  if (!googleLogin) return;
+// Password visibility toggle
+function setupPasswordToggle(inputId) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
 
-  const { showToast } = window.CyberM;
+  const container = input.parentElement;
+  const toggleBtn = document.createElement('button');
+  toggleBtn.type = 'button';
+  toggleBtn.className = 'password-toggle';
+  toggleBtn.textContent = 'Show';
+  toggleBtn.style.cssText = `
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+  `;
 
-  googleLogin.addEventListener('click', () => {
-    showToast('Connecting to Google...');
-    setTimeout(() => {
-      showToast('Google sign-in is not yet configured on this demo.', 'error');
-    }, 1200);
+  container.style.position = 'relative';
+  container.appendChild(toggleBtn);
+
+  toggleBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const isPassword = input.type === 'password';
+    input.type = isPassword ? 'text' : 'password';
+    toggleBtn.textContent = isPassword ? 'Hide' : 'Show';
   });
 }
