@@ -1,0 +1,150 @@
+/* =========================================================
+   CYBERM — About page
+   ========================================================= */
+
+.about-page {
+  padding: 56px 0 80px;
+}
+
+/* ---- Hero / mission ------------------------------------------------------ */
+
+.about-lead {
+  max-width: 62ch;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: 0 0 40px;
+}
+
+/* ---- Section rhythm ------------------------------------------------------ */
+
+.about-section {
+  margin-bottom: 24px;
+}
+
+.about-section-head {
+  margin-bottom: 18px;
+}
+
+.about-section-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.about-section-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* ---- Feature grid --------------------------------------------------------- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  padding: 22px 20px;
+}
+
+.feature-index {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 14px;
+}
+
+.feature-name {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.feature-desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* ---- Two up: audience + team ---------------------------------------------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Team roster */
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.team-member:last-child {
+  border-bottom: none;
+}
+
+.team-avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.team-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.team-role {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--color-muted);
+}
+
+/* ---- Responsive ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-lead {
+    font-size: 15.5px;
+  }
+}
