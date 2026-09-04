@@ -1,53 +1,73 @@
-/* =========================================================
-   CYBERM — signup page
-   Loaded after css/style.css. Holds only what's unique to
-   the "Create your account" page: the role picker grid.
-   ========================================================= */
-
-.role-group {
-  margin-top: 2px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.role-group > label {
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #8a8579;
-  margin-bottom: 10px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  min-height: 100vh;
 }
 
-.role-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
+.container {
+  display: flex;
+  height: 100vh;
 }
 
-.role-option {
-  border: 1px solid var(--border);
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 9px 6px;
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--text-dark);
-  text-align: center;
-  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+.left-section {
+  background: #1a1a1a;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+  min-width: 50%;
 }
 
-.role-option:hover {
-  border-color: #c7c2b5;
+.left-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-.role-option.selected {
-  background: var(--black);
-  border-color: var(--black);
-  color: var(--white);
+.left-section .highlight {
+  color: #ff9800;
 }
 
-@media (max-width: 480px) {
-  .role-grid {
-    grid-template-columns: 1fr 1fr;
+.left-section p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.right-section {
+  background: #f5f0e8;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+  min-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    min-width: 100%;
+    padding: 40px 20px;
+  }
+
+  .left-section h1 {
+    font-size: 36px;
   }
 }
