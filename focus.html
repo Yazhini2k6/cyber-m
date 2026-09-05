@@ -2,19 +2,28 @@
 <html lang="en" data-theme="light">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="CYBERM - An all-in-one cybersecurity workspace for research, tools, learning and security practice.">
 
     <title>CYBERM | Cybersecurity Workspace</title>
 
-    <!-- Main CSS -->
+
+    <!-- CSS File -->
     <link rel="stylesheet" href="css/focus.css">
+
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 </head>
@@ -34,37 +43,60 @@
             });
     </script>
 
-    <!-- =========================
-         MAIN WEBSITE WRAPPER
-    ========================== -->
+    <!-- =====================================
+         MAIN PAGE WRAPPER
+    ====================================== -->
 
     <div class="page-wrapper">
 
 
-        <!-- =========================
+        <!-- =====================================
+             THEME TOGGLE BUTTON
+        ====================================== -->
+
+        <div class="theme-toggle-container">
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch between light and dark theme"
+                title="Toggle light and dark mode">
+
+                <span id="themeIcon">☾</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================
              MAIN CONTENT
-        ========================== -->
+        ====================================== -->
 
         <main>
 
 
-            <!-- =========================
+            <!-- =====================================
                  HERO SECTION
-            ========================== -->
+            ====================================== -->
 
             <section class="hero-section">
+
+
+                <!-- HERO CONTENT GRID -->
 
                 <div class="hero-container">
 
 
-                    <!-- =========================
-                         LEFT CONTENT
-                    ========================== -->
+                    <!-- =====================================
+                         LEFT HERO CONTENT
+                    ====================================== -->
 
                     <div class="hero-left">
 
 
-                        <!-- Eyebrow -->
+                        <!-- EYEBROW -->
 
                         <div class="eyebrow">
 
@@ -77,18 +109,24 @@
                         </div>
 
 
-                        <!-- Main Heading -->
+                        <!-- MAIN HEADING -->
 
                         <h1>
+
                             Security
+
                             <br>
+
                             starts with
+
                             <br>
+
                             <span>focus.</span>
+
                         </h1>
 
 
-                        <!-- Description -->
+                        <!-- HERO DESCRIPTION -->
 
                         <p class="hero-description">
 
@@ -99,26 +137,40 @@
                         </p>
 
 
-                        <!-- Buttons -->
+                        <!-- HERO BUTTONS -->
 
                         <div class="hero-buttons">
 
-                            <a href="signup.html" class="primary-btn">
+
+                            <!-- Primary Button -->
+
+                            <a
+                                href="signup.html"
+                                class="primary-btn">
 
                                 Enter the workspace
 
-                                <span>→</span>
+                                <span class="button-icon">
+                                    →
+                                </span>
 
                             </a>
 
 
-                            <a href="#platform" class="secondary-btn">
+                            <!-- Secondary Button -->
+
+                            <a
+                                href="#platform"
+                                class="secondary-btn">
 
                                 Explore platform
 
-                                <span>↓</span>
+                                <span class="button-icon">
+                                    ↓
+                                </span>
 
                             </a>
+
 
                         </div>
 
@@ -126,52 +178,64 @@
                     </div>
 
 
-                    <!-- =========================
-                         RIGHT CONTENT
-                    ========================== -->
+                    <!-- =====================================
+                         RIGHT HERO CONTENT
+                    ====================================== -->
 
                     <div class="hero-right">
 
 
-                        <!-- Description -->
+                        <!-- RIGHT DESCRIPTION -->
 
                         <p class="right-description">
 
-                            Designed for the people who build, break, defend
-                            and understand digital systems. Everything stays
-                            in one place.
+                            Designed for the people who build, break,
+                            defend and understand digital systems.
+                            Everything stays in one place.
 
                         </p>
 
 
-                        <!-- Statistics -->
+                        <!-- STATISTICS -->
 
                         <div class="stats-row">
 
+
+                            <!-- STAT 1 -->
 
                             <div class="stat">
 
                                 <h3>06</h3>
 
-                                <span>CORE WORKSPACES</span>
+                                <span>
+                                    CORE WORKSPACES
+                                </span>
 
                             </div>
 
+
+                            <!-- STAT 2 -->
 
                             <div class="stat">
 
                                 <h3>01</h3>
 
-                                <span>UNIFIED PLATFORM</span>
+                                <span>
+                                    UNIFIED PLATFORM
+                                </span>
 
                             </div>
 
+
+                            <!-- STAT 3 -->
 
                             <div class="stat">
 
                                 <h3>24/7</h3>
 
-                                <span>SECURITY LEARNING</span>
+                                <span>
+                                    SECURITY LEARNING
+                                </span>
 
                             </div>
 
@@ -185,77 +249,127 @@
                 </div>
 
 
-                <!-- =========================
+                <!-- =====================================
                      FEATURE CARDS
-                ========================== -->
+                ====================================== -->
 
-                <div class="features-container" id="platform">
+                <div
+                    class="features-container"
+                    id="platform">
 
 
-                    <!-- Card 1 -->
+                    <!-- FEATURE CARD 01 -->
 
                     <article class="feature-card">
 
+
                         <div class="card-number">
+
                             01
+
                         </div>
 
-                        <h3>Roadmaps</h3>
+
+                        <h3>
+
+                            Roadmaps
+
+                        </h3>
+
 
                         <p>
+
                             Structured career paths
+
                         </p>
+
 
                     </article>
 
 
-                    <!-- Card 2 -->
+                    <!-- FEATURE CARD 02 -->
 
                     <article class="feature-card">
 
+
                         <div class="card-number">
+
                             02
+
                         </div>
 
-                        <h3>Security Tools</h3>
+
+                        <h3>
+
+                            Security Tools
+
+                        </h3>
+
 
                         <p>
+
                             Curated security essentials
+
                         </p>
+
 
                     </article>
 
 
-                    <!-- Card 3 -->
+                    <!-- FEATURE CARD 03 -->
 
                     <article class="feature-card">
 
+
                         <div class="card-number">
+
                             03
+
                         </div>
 
-                        <h3>Utilities</h3>
+
+                        <h3>
+
+                            Utilities
+
+                        </h3>
+
 
                         <p>
+
                             Interactive utilities
+
                         </p>
+
 
                     </article>
 
 
-                    <!-- Card 4 -->
+                    <!-- FEATURE CARD 04 -->
 
                     <article class="feature-card">
 
+
                         <div class="card-number">
+
                             04
+
                         </div>
 
-                        <h3>Curated Guides</h3>
+
+                        <h3>
+
+                            Curated Guides
+
+                        </h3>
+
 
                         <p>
+
                             Practical references
+
                         </p>
+
 
                     </article>
 
@@ -272,7 +386,17 @@
     </div>
 
 
-    <!-- External JavaScript -->
+    <!-- =====================================
+         JAVASCRIPT FILE
+    ====================================== -->
+    <div id="footer-placeholder"></div>
+        <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
     <script src="js/focus.js"></script>
 
 

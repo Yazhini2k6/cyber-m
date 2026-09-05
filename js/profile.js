@@ -176,4 +176,41 @@ function initEditModal() {
 
 document.addEventListener("DOMContentLoaded", initEditModal);
 
+/* ---------------------------------------------------------
+   Theme toggle (light / dark)
+   --------------------------------------------------------- */
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  try {
+    localStorage.setItem("cyberm-theme", theme);
+  } catch (e) {}
+
+  const btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+    btn.setAttribute(
+      "aria-label",
+      theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+    );
+  }
+}
+
+function initThemeToggle() {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+
+  applyTheme(document.documentElement.getAttribute("data-theme") || "light");
+
+  btn.addEventListener("click", () => {
+    const next =
+      document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+    btn.classList.add("is-animating");
+    setTimeout(() => btn.classList.remove("is-animating"), 500);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initThemeToggle);
+
 document.addEventListener("DOMContentLoaded", loadProfile);
